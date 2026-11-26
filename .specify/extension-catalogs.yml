@@ -1,0 +1,18 @@
+# Extension catalogs for this project (replaces Spec Kit's built-in stack).
+# internal: vetted extensions - see https://github.com/integrationfirst/speckit-catalog
+catalogs:
+  - name: internal
+    url: https://raw.githubusercontent.com/integrationfirst/speckit-catalog/main/catalog.json
+    priority: 1
+    install_allowed: true
+    description: Vetted internal extensions
+  - name: default
+    url: https://raw.githubusercontent.com/github/spec-kit/main/extensions/catalog.json
+    priority: 2
+    install_allowed: true
+    description: Built-in catalog of installable extensions
+  - name: community
+    url: https://raw.githubusercontent.com/github/spec-kit/main/extensions/catalog.community.json
+    priority: 3
+    install_allowed: false
+    description: Community-contributed extensions (discovery only)
