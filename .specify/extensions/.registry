@@ -1,25 +1,4 @@
 {
   "schema_version": "1.0",
-  "extensions": {
-    "jira": {
-      "version": "2.1.0",
-      "source": {
-        "kind": "catalog",
-        "catalog": "internal"
-      },
-      "manifest_hash": "sha256:5d5bdc26ee4af105f1734c29dde9fe0f432e9125a42314201ff04c75ca349bf9",
-      "enabled": true,
-      "priority": 10,
-      "registered_commands": {
-        "claude": [
-          "speckit.jira.specstoissues",
-          "speckit.specstoissues",
-          "speckit.jira.discover-fields",
-          "speckit.jira.sync-status"
-        ]
-      },
-      "registered_skills": [],
-      "installed_at": "2026-11-26T03:59:53.420339+00:00"
-    }
-  }
+  "extensions": {}
 }
