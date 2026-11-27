@@ -126,8 +126,8 @@ downloads (quickstart.md V4, SC-006).
 
 ### Implementation for User Story 3
 
-- [ ] T024 [US3] Add a "Development" section to the README below the existing title (FR-017), covering: prerequisites (Node.js 22 LTS `>=22.12`, `nvm use` reads `.nvmrc`, npm); one-time Playwright setup `npx playwright install --with-deps chromium` (note that `--with-deps` may need sudo on Linux); install with `npm ci`; run locally with `npm run dev` and `npm run build && npm run preview`; a table of the five gate scripts with their commands and what each checks (from contracts/npm-scripts.md); notes that every script is non-interactive, that `test:e2e` builds and serves the app itself on port 4173 and fails fast if that port is in use; and the stack (Vite, React, TypeScript strict, Tailwind CSS v4 with `src/index.css` as the only stylesheet, ESLint, Vitest + React Testing Library, Playwright + axe-core) in README.md
-- [ ] T025 [US3] Perform the README check from quickstart.md V4: on a fresh clone, follow only README.md and confirm install, dev server, `typecheck`, `lint`, `test:unit`, `test:e2e` and `build` all work and that the Node version and Playwright browser install step are stated (US3-AS1, US3-AS2); fix gaps in README.md and record the result in the US3 pull request description per specs/001-init-react-ts-tailwind/quickstart.md
+- [X] T024 [US3] Add a "Development" section to the README below the existing title (FR-017), covering: prerequisites (Node.js 22 LTS `>=22.12`, `nvm use` reads `.nvmrc`, npm); one-time Playwright setup `npx playwright install --with-deps chromium` (note that `--with-deps` may need sudo on Linux); install with `npm ci`; run locally with `npm run dev` and `npm run build && npm run preview`; a table of the five gate scripts with their commands and what each checks (from contracts/npm-scripts.md); notes that every script is non-interactive, that `test:e2e` builds and serves the app itself on port 4173 and fails fast if that port is in use; and the stack (Vite, React, TypeScript strict, Tailwind CSS v4 with `src/index.css` as the only stylesheet, ESLint, Vitest + React Testing Library, Playwright + axe-core) in README.md
+- [X] T025 [US3] Perform the README check from quickstart.md V4: on a fresh clone, follow only README.md and confirm install, dev server, `typecheck`, `lint`, `test:unit`, `test:e2e` and `build` all work and that the Node version and Playwright browser install step are stated (US3-AS1, US3-AS2); fix gaps in README.md and record the result in the US3 pull request description per specs/001-init-react-ts-tailwind/quickstart.md
 
 **Checkpoint**: All user stories are independently functional.
 
@@ -137,8 +137,8 @@ downloads (quickstart.md V4, SC-006).
 
 **Purpose**: Scope and constraint checks across all stories, then the full validation run
 
-- [ ] T026 [P] Audit scope and constraints: `dependencies` in package.json contain only `react` and `react-dom` (Principle V); `src/index.css` is the only `.css` file and no inline `<style>` exists (FR-010); no router, store, `fetch`, auth or deployment config exists (FR-018); no `any` and no non-null assertions in `src/`, `tests/` or config files (Principle I). Fix any finding in the offending file, starting from package.json
-- [ ] T027 Run the full validation in specs/001-init-react-ts-tailwind/quickstart.md from a clean state (`rm -rf node_modules dist test-results playwright-report`, then V1 through V4) and confirm every V1 command exits 0 and every V2 plant fails as expected
+- [X] T026 [P] Audit scope and constraints: `dependencies` in package.json contain only `react` and `react-dom` (Principle V); `src/index.css` is the only `.css` file and no inline `<style>` exists (FR-010); no router, store, `fetch`, auth or deployment config exists (FR-018); no `any` and no non-null assertions in `src/`, `tests/` or config files (Principle I). Fix any finding in the offending file, starting from package.json
+- [X] T027 Run the full validation in specs/001-init-react-ts-tailwind/quickstart.md from a clean state (`rm -rf node_modules dist test-results playwright-report`, then V1 through V4) and confirm every V1 command exits 0 and every V2 plant fails as expected
 
 ---
 
