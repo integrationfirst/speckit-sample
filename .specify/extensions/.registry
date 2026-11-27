@@ -1,4 +1,25 @@
 {
   "schema_version": "1.0",
-  "extensions": {}
+  "extensions": {
+    "issue-flow": {
+      "version": "0.1.1",
+      "source": {
+        "kind": "catalog",
+        "catalog": "internal"
+      },
+      "manifest_hash": "sha256:4ec65c8e7ba3702af9eb8efb18db4087a88f7c42969ea2311a0709633ffac382",
+      "enabled": true,
+      "priority": 10,
+      "registered_commands": {
+        "claude": [
+          "speckit.issue-flow.setup",
+          "speckit.issue-flow.publish",
+          "speckit.issue-flow.fix",
+          "speckit.issue-flow.status"
+        ]
+      },
+      "registered_skills": [],
+      "installed_at": "2026-11-27T09:38:39.636210+00:00"
+    }
+  }
 }

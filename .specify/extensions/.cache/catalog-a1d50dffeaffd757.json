@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-26T00:00:00Z",
+  "updated_at": "2026-11-27T00:00:00Z",
   "catalog_url": "https://raw.githubusercontent.com/integrationfirst/speckit-catalog/main/catalog.json",
   "extensions": {
     "jira": {
@@ -38,6 +38,57 @@
       },
       "created_at": "2026-03-05T00:00:00Z",
       "updated_at": "2026-03-05T00:00:00Z"
+    },
+    "issue-flow": {
+      "name": "Issue Flow",
+      "id": "issue-flow",
+      "description": "GitHub issue-driven spec-driven development flow with approvals, stacked PRs and test gating. Pairs with the issue-to-pr and issue-flow-stage workflows.",
+      "author": "integrationfirst",
+      "version": "0.1.1",
+      "download_url": "https://github.com/integrationfirst/speckit-catalog/releases/download/issue-flow-v0.1.1/issue-flow-0.1.1.zip",
+      "repository": "https://github.com/integrationfirst/speckit-catalog",
+      "homepage": "https://github.com/integrationfirst/speckit-catalog",
+      "documentation": "https://github.com/integrationfirst/speckit-catalog/blob/main/README.md",
+      "changelog": "https://github.com/integrationfirst/speckit-catalog/blob/main/README.md",
+      "license": "MIT",
+      "category": "integration",
+      "effect": "read-write",
+      "requires": {
+        "speckit_version": ">=1.4.0",
+        "tools": [
+          {
+            "name": "gh",
+            "required": true
+          },
+          {
+            "name": "git",
+            "required": true
+          },
+          {
+            "name": "uv",
+            "required": true
+          }
+        ]
+      },
+      "provides": {
+        "commands": 4,
+        "hooks": 0
+      },
+      "tags": [
+        "github",
+        "issues",
+        "approvals",
+        "pull-requests",
+        "workflow"
+      ],
+      "verified": true,
+      "vetting": {
+        "vetted_at": "2026-11-27",
+        "archive_sha256": "c7e1927fcbe96346a4f2c0c37fb1738a478b87cded2060e1b946a3d35a814b66",
+        "notes": "First-party extension (integrationfirst). 4 Markdown commands plus a Python CLI (bin/issue-flow.sh) that calls gh and git. Writes to GitHub (issues, comments, branches, PRs) and optionally Confluence via the agent. Approvals only count from logins in the config committed on the default branch. Headless permissions exclude gh and git push and deny edits to the extension directory. Zip excludes tests/. 0.1.1: CLI-only state writes (set-page), agents limited to request/set-page/pull-issue, approvers read from origin's default branch (fetched), standalone stage dry runs, always stacked."
+      },
+      "created_at": "2026-11-26T00:00:00Z",
+      "updated_at": "2026-11-27T00:00:00Z"
     }
   }
 }

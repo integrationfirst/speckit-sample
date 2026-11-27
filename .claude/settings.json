@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash(.specify/scripts/bash/*:*)",
+      "Bash(.specify/extensions/issue-flow/bin/issue-flow.sh request:*)",
+      "Bash(.specify/extensions/issue-flow/bin/issue-flow.sh set-page:*)",
+      "Bash(.specify/extensions/issue-flow/bin/issue-flow.sh pull-issue:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git status:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ci:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run test:unit:*)",
+      "Bash(npm run test:e2e:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx playwright install:*)",
+      "mcp__plugin_atlassian_atlassian__createConfluenceContent",
+      "mcp__plugin_atlassian_atlassian__updateConfluenceContent",
+      "mcp__plugin_atlassian_atlassian__getConfluenceContent",
+      "mcp__plugin_atlassian_atlassian__getAccessibleAtlassianResources",
+      "mcp__plugin_atlassian_atlassian__discover",
+      "mcp__plugin_atlassian_atlassian__executeRead",
+      "mcp__plugin_atlassian_atlassian__executeWrite"
+    ],
+    "deny": [
+      "Edit(.specify/extensions/issue-flow/**)",
+      "Write(.specify/extensions/issue-flow/**)",
+      "Edit(.specify/issue-flow/**)",
+      "Write(.specify/issue-flow/**)",
+      "Edit(.git/**)",
+      "Write(.git/**)",
+      "Edit(.claude/**)",
+      "Write(.claude/**)"
+    ]
+  }
+}

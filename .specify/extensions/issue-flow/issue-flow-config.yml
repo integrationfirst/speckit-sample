@@ -1,0 +1,64 @@
+# Issue Flow configuration
+# approvers, stages and git are read only from this file as committed on main (origin).
+github:
+  repo: integrationfirst/speckit-sample
+  trigger_label: coding-agent
+  progress_labels:
+    in_progress: in-progress
+    in_review: in-review
+
+confluence:
+  site: strongtie.atlassian.net
+  space_key: "~712020577f217da5f54974be8cf9fa0461be85"   # personal space "Minh Tran"
+  parent_page_id: ""
+
+approvers:                      # GitHub logins per role
+  product_owner: [minhtranes]
+  business_analyst: [minhtranes]
+  solution_architect: [minhtranes]
+  team_lead: [simeonminh]       # must not be the login that runs the workflow (PR author)
+  qa_lead: [minhtranes]
+
+stages:
+  spec:
+    roles: [product_owner, business_analyst, solution_architect]
+    require: all
+  plan:
+    roles: [team_lead]
+  tasks:
+    roles: [team_lead]
+  qa:
+    roles: [qa_lead]
+  pr:
+    roles: [team_lead]
+    via: github_review
+
+# React + TypeScript + Tailwind. The commands are npm scripts that the first Story must
+# create in package.json (typecheck: tsc --noEmit, lint: eslint, test:unit: vitest run,
+# test:e2e: playwright test). Run by the issue-flow CLI, not by the agent.
+tests:
+  max_fix_rounds: 5
+  suites:
+    - name: typecheck
+      type: static
+      command: "npm run typecheck"
+      required: true
+      timeout_seconds: 600
+    - name: lint
+      type: static
+      command: "npm run lint"
+      required: true
+      timeout_seconds: 600
+    - name: unit
+      type: unit
+      command: "npm run test:unit"
+      required: true
+      timeout_seconds: 1200
+    - name: ui
+      type: ui
+      command: "npm run test:e2e"
+      required: true
+      timeout_seconds: 1800
+
+git:
+  default_branch: main

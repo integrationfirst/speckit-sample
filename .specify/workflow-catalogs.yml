@@ -1,0 +1,6 @@
+catalogs:
+- name: internal
+  url: https://raw.githubusercontent.com/integrationfirst/speckit-catalog/main/workflows/catalog.json
+  priority: 1
+  install_allowed: true
+  description: ''

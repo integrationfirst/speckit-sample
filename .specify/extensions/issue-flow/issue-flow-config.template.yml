@@ -1,0 +1,45 @@
+# Issue Flow configuration
+github:
+  repo: ""                      # owner/name
+  trigger_label: coding-agent
+  progress_labels:
+    in_progress: in-progress
+    in_review: in-review
+
+confluence:
+  site: strongtie.atlassian.net
+  space_key: ""
+  parent_page_id: ""
+
+approvers:                      # GitHub logins per role
+  product_owner: []
+  business_analyst: []
+  solution_architect: []
+  team_lead: []
+  qa_lead: []
+
+stages:
+  spec:
+    roles: [product_owner, business_analyst, solution_architect]
+    require: all
+  plan:
+    roles: [team_lead]
+  tasks:
+    roles: [team_lead]
+  qa:
+    roles: [qa_lead]
+  pr:
+    roles: [team_lead]
+    via: github_review
+
+tests:
+  max_fix_rounds: 5
+  suites:
+    - name: unit
+      type: unit
+      command: "echo configure-me"
+      required: true
+      timeout_seconds: 1800
+
+git:
+  default_branch: main

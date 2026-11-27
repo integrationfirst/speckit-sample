@@ -8,6 +8,26 @@
       "source": "bundled",
       "installed_at": "2026-11-25T10:43:09.157358+00:00",
       "updated_at": "2026-11-25T10:43:09.157376+00:00"
+    },
+    "issue-to-pr": {
+      "name": "Issue to pull requests",
+      "version": "0.1.1",
+      "description": "GitHub issue (label coding-agent) \u2192 approved spec, plan and tasks \u2192 one tested, QA-approved, reviewed pull request per Story",
+      "source": "catalog",
+      "catalog_name": "internal",
+      "url": "https://raw.githubusercontent.com/integrationfirst/speckit-catalog/main/workflows/issue-to-pr/workflow.yml",
+      "installed_at": "2026-11-27T09:38:42.650523+00:00",
+      "updated_at": "2026-11-27T09:38:42.650545+00:00"
+    },
+    "issue-flow-stage": {
+      "name": "Issue Flow approval stage",
+      "version": "0.1.1",
+      "description": "Publish a spec/plan/tasks artifact for approval on GitHub, wait for the approvers, regenerate with feedback on rejection",
+      "source": "catalog",
+      "catalog_name": "internal",
+      "url": "https://raw.githubusercontent.com/integrationfirst/speckit-catalog/main/workflows/issue-flow-stage/workflow.yml",
+      "installed_at": "2026-11-27T09:38:44.015096+00:00",
+      "updated_at": "2026-11-27T09:38:44.015121+00:00"
     }
   }
 }

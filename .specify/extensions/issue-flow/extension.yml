@@ -1,0 +1,41 @@
+schema_version: "1.0"
+
+extension:
+  id: "issue-flow"
+  name: "Issue Flow"
+  version: "0.1.1"
+  description: "GitHub issue-driven spec-driven development flow with approvals, stacked PRs and test gating"
+  author: "integrationfirst"
+  repository: "https://github.com/integrationfirst/speckit-catalog"
+  license: "MIT"
+  homepage: "https://github.com/integrationfirst/speckit-catalog"
+
+requires:
+  speckit_version: ">=1.4.0"
+  tools:
+    - name: "gh"
+      required: true
+    - name: "git"
+      required: true
+    - name: "uv"
+      required: true
+
+provides:
+  commands:
+    - name: "speckit.issue-flow.setup"
+      file: "commands/setup.md"
+      description: "Interactively configure Issue Flow"
+    - name: "speckit.issue-flow.publish"
+      file: "commands/publish.md"
+      description: "Publish a stage artifact for approval"
+    - name: "speckit.issue-flow.fix"
+      file: "commands/fix.md"
+      description: "Fix a story from the newest feedback"
+    - name: "speckit.issue-flow.status"
+      file: "commands/status.md"
+      description: "Read-only summary of an Issue Flow run"
+  config:
+    - name: "issue-flow-config.yml"
+      template: "issue-flow-config.template.yml"
+      description: "Issue Flow configuration"
+      required: true
